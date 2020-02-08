@@ -241,6 +241,7 @@ websockets = ">=8.0.0,<9.0.0"
 [[package]]
 category = "main"
 description = "Fast implementation of asyncio event loop on top of libuv"
+marker = "sys_platform != \"win32\" and sys_platform != \"cygwin\" and platform_python_implementation != \"pypy\""
 name = "uvloop"
 optional = false
 python-versions = "*"
@@ -280,7 +281,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools"]
 
 [metadata]
-content-hash = "eb7576202a90fb8ee4fc07d47b40f165393721e2d9dc9c00db1e0562995e09fc"
+content-hash = "680166c88dc503b196675fca239567660d6f3361856d611e11345f5fbee81561"
 python-versions = ">=3.6"
 
 [metadata.files]
