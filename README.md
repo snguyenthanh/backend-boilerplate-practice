@@ -26,3 +26,22 @@ poetry install
 ```
 pip install pre-commit
 ```
+
+## Usage
+
+> You are also recommended to check out [other commands for Poetry](https://python-poetry.org/docs/cli/).
+
+### To open the shell within the virtual environment:
+
+```
+poetry shell
+
+# Run a Python file
+poetry run app.py
+```
+
+### Run a Python file without opening a shell
+
+```
+poetry run python app.py
+```
