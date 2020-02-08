@@ -37,7 +37,7 @@ pip install pre-commit
 poetry shell
 
 # Run a Python file
-poetry run app.py
+python run app.py
 ```
 
 ### Run a Python file without opening a shell
