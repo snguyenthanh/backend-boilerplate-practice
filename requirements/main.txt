@@ -1,0 +1,9 @@
+Warning: The lock file is not up to date with the latest changes in pyproject.toml. You may be getting outdated dependencies. Run update to update them.
+click==7.0
+h11==0.9.0
+httptools==0.0.13; sys_platform != "win32" and sys_platform != "cygwin" and platform_python_implementation != "pypy"
+starlette==0.13.1
+ujson==1.35
+uvicorn==0.11.2
+uvloop==0.14.0
+websockets==8.0.2
