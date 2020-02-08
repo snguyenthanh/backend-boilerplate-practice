@@ -2,5 +2,5 @@
 
 export PYTHONPATH=.
 
-# pipenv run alembic revision --autogenerate --head head
-# pipenv run alembic upgrade head
+# poetry run alembic revision --autogenerate --head head
+# poetry run alembic upgrade head
