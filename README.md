@@ -23,6 +23,8 @@ poetry install
 
 ### 3. Set up [Pre-commit](https://github.com/pre-commit/pre-commit) (for development)
 
+> Windows users could skip this step as pre-commit is not yet supported on Windows.
+
 ```
 pip install pre-commit
 pre-commit install

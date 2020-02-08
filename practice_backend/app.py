@@ -12,5 +12,5 @@ app = Starlette(debug=True, routes=[Route("/", homepage),])
 
 if __name__ == "__main__":
     uvicorn.run(
-        "practice_backend:app", host="127.0.0.1", port=8000, http="h11", loop="asyncio"
+        "app:app", host="127.0.0.1", port=8000, http="h11", loop="asyncio"
     )
