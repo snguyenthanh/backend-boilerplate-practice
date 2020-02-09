@@ -4,6 +4,7 @@
 set -e
 export MODE=development
 
+# TODO - Exercise 2
 # Set up DB or related services
 # ...
 

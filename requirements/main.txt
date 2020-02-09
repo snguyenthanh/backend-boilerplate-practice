@@ -1,8 +1,9 @@
 click==7.0
 h11==0.9.0
 httptools==0.0.13; sys_platform != "win32" and sys_platform != "cygwin" and platform_python_implementation != "pypy"
+marshmallow==3.4.0
 starlette==0.13.1
 ujson==1.35
 uvicorn==0.11.2
-uvloop==0.14.0; sys_platform != "win32" and sys_platform != "cygwin" and platform_python_implementation != "pypy"
+uvloop==0.14.0; sys_platform != "win32" and sys_platform != "cygwin" and platform_python_implementation != "pypy" or implementation_name != "pypy" and platform_system != "Windows"
 websockets==8.0.2

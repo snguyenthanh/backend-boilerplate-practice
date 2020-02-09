@@ -9,6 +9,8 @@ python = ">=3.6"
 starlette = "^0.13.1"
 ujson = "^1.35"
 uvicorn = "^0.11.2"
+uvloop = { version = "^0.14.0", markers = "implementation_name != 'pypy' and platform_system != 'Windows'"}
+marshmallow = "^3.4.0"
 
 [tool.poetry.dev-dependencies]
 pre-commit = "^2.0.1"
