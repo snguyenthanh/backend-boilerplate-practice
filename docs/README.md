@@ -63,7 +63,7 @@ The [`requirements/`](../../../tree/master/requirements) directory contains the 
 
 the [`scripts/`](../../../tree/master/scripts) directory contains the Bash files (CLI) to make your life easier.
 
-The remaining configuration files (including `*.yml`, `*.yaml` and `*.toml`) are covered in [Tool Configuration](general/files.md).
+The remaining configuration files (including `*.yml`, `*.yaml` and `*.toml`) are covered in [Tool Configuration](general/tools.md).
 
 
 ### Development
