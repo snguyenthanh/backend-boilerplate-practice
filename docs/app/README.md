@@ -32,3 +32,16 @@ You could also use other libraries (such as [GINO](https://github.com/python-gin
 This project adopts [the Application Factory Pattern](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-xv-a-better-application-structure) (having the application to be created by function `create_app()` instead of being a global variable) and [Django's project structure](https://djangobook.com/mdj2-django-structure/).
 
 Helper functions should be put under `practice_backend/utils/` directory to reduce the complexity of the main files, as well as to make the functions reusable.
+
+```
+backend-boilerplate-practice
+├── app.py
+└── practice_backend
+    ├── exceptions
+    ├── config
+    ├── middlewares
+    ├── models
+    ├── schemas
+    ├── tests
+    └── utils
+```
