@@ -31,6 +31,14 @@ Windows users could skip this step as pre-commit is not yet supported on Windows
 poetry run python app.py
 ```
 
+## Getting started
+
+1. [Installation and the general structure of the repo](docs/README.md)
+1. [The tools used by the project](docs/general/tools.md)
+1. [The project structure and packages](docs/app/README.md)
+1. [How to work with certain features](docs/app#learn-more)
+1. [Start to learn back-end development](docs/exercises/README.md)
+
 ## Documentation
 - [**Overview**](docs/README.md): A short overview of the included tools.
 - [**Tools**](docs/general/tools.md): An overview of the configuration files of this project (including `Tox` and `Poetry`).

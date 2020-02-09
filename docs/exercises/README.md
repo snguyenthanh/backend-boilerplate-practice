@@ -2,12 +2,7 @@
 
 > To look for where to do each exercise, search for `TODO - Exercise X`, where X is the number of the exercise.
 
-
-## 1. Understand the overall structure of the project
-
-At the moment, the project only has 1 endpoint (root - `/`), unfinished helper functions for authentication and a sample for schema (using [Marshmallow](https://marshmallow.readthedocs.io/en/stable/)).
-
-## 2. Set up a development database
+## 1. Set up a development database
 
 For this project, we will be using [Docker](https://www.docker.com) as a container for our database and application.
 
@@ -16,11 +11,24 @@ Steps:
 - Read about how to create, start and stop a Docker container.
 - Add `docker` commands to `scripts/dev.sh` to set up and run a Docker container for our development database.
 
-## 3. Integrate an ORM to the app
+## 2. Integrate an ORM to the app
 
 Starlette advises using [the `databases` package](https://github.com/encode/databases), which also provides [SQLAlchemy](https://www.sqlalchemy.org) support.
 
-I am aware that the name of the `databases` package makes it very hard to search for solutions for its problems. However, as this is a practice repo, a general-purpose library is preferred, since `databases` could support MySQL, PostgreSQL and SQLite.
+Integrate `databases` to `Starlette`'s app and write a `User` model and schema with the following fields:
+- id: uuid (or str)
+- username: str
+- password: str
+- role_id: int
+- is_disabled: bool
+- created_at: int (unix timestamp)
+- updated_at: int (unix timestamp)
+
+
+## 3. Authentication
+
+1. Finish the function `authenticate` of `AuthBackend` in `practice_backend/middlewares/authentication.py`.
+1. Use [the built-in decorator `requires` of `Starlette`](https://www.starlette.io/authentication) to validate that the authentication works as expected.
 
 ## 4. Serialization with [Marshmallow](https://marshmallow.readthedocs.io/en/stable/)
 
@@ -51,7 +59,7 @@ schema={
 With serialization, we could convert the value of age (which is currently a string of `20`) to `integer` and verify that the query parameters (`username` and `age`) have expected data types.
 
 
-### 4.3. Common usage of de-serialization
+### 3.3. Common usage of de-serialization
 
 De-serialization is commonly used to filter and parse returned data to users. An example is:
 ```
@@ -64,3 +72,7 @@ deserialized_data = {
 	}
 }
 ```
+
+### 4.4. Assignments
+
+Implement an endpoint `/users/me` that returns the information of the logged in user, excluding the password.
