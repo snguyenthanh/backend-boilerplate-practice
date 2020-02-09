@@ -10,8 +10,6 @@ export MODE=development
 
 # Run the Python app
 poetry run python app.py &
-# pipenv run hypercorn --keep-alive 10 --workers 3 --bind 127.0.0.1:8000 app:app
 
-# Allow both the Postgres container and Python app
-# to run in parallel
+# Allow both the DB container and Python app to run in parallel
 wait

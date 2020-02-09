@@ -1,6 +1,3 @@
-import base64
-import binascii
-
 from starlette.authentication import (
     AuthenticationBackend,
     AuthenticationError,
@@ -15,15 +12,11 @@ class AuthBackend(AuthenticationBackend):
             return
 
         auth = request.headers["Authorization"]
-        try:
-            scheme, credentials = auth.split()
-            if scheme.lower() != "basic":
-                return
-            decoded = base64.b64decode(credentials).decode("ascii")
-        except (ValueError, UnicodeDecodeError, binascii.Error):
-            raise AuthenticationError("Invalid basic auth credentials")
+        scheme, credentials = auth.split()
+        if scheme.lower() != "basic":
+            return
 
-        username, _, password = decoded.partition(":")
         # TODO: Exercise 3
-        # You'd want to verify the username and password here, using a database.
+        # Hash the password using passlib[bcrypt]
+        # and verify the username and password with a database.
         return AuthCredentials(["authenticated"]), SimpleUser(username)
