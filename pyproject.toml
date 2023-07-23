@@ -8,7 +8,7 @@ authors = []
 python = ">=3.6"
 starlette = "^0.13.1"
 ujson = "^1.35"
-uvicorn = "^0.11.2"
+uvicorn = "^0.11.7"
 uvloop = { version = "^0.14.0", markers = "implementation_name != 'pypy' and platform_system != 'Windows'"}
 marshmallow = "^3.4.0"
 
