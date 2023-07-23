@@ -6,4 +6,4 @@ starlette==0.13.1
 ujson==1.35
 uvicorn==0.11.2
 uvloop==0.14.0; sys_platform != "win32" and sys_platform != "cygwin" and platform_python_implementation != "pypy" or implementation_name != "pypy" and platform_system != "Windows"
-websockets==8.0.2
+websockets==9.1
